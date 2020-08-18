@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "e9adae9f-522e-48e8-a9ea-de02d2cf5c61",
+		"name": "api-node-livros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listar-livros",
+			"item": [
+				{
+					"name": "localhost:3000/livros/listar",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "l79254db4373e744e7a5a809da5f0d14a3",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "376yoXcTmtVmiUxNJgJJQsrXfpSgVVwK58",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/livros/listar",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "cadastrar livros",
+			"item": [
+				{
+					"name": "localhost:3000/livros/cadastrar",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "l79254db4373e744e7a5a809da5f0d14a3",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "376yoXcTmtVmiUxNJgJJQsrXfpSgVVwK58",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"teste com numeros\",\r\n    \"isbn\": 12345678,\r\n    \"autor\": \"Não sei quem\",\r\n    \"preco\": 12.50\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/livros/cadastrar",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "deletar livros",
+			"item": [
+				{
+					"name": "localhost:3000/livros/5f31a3d4f514380694edc16f",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/livros/5f31a3d4f514380694edc16f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros",
+								"5f31a3d4f514380694edc16f"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "alterar cadastros",
+			"item": [
+				{
+					"name": "localhost:3000/livros/5f31b35be979fe2dfc6d225c",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\" : \"novo titulo para update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/livros/5f31b35be979fe2dfc6d225c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros",
+								"5f31b35be979fe2dfc6d225c"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
